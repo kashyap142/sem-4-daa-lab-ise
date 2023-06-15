@@ -4,7 +4,6 @@
 
 void printArray(int arr[] , int size)
 {
-    printf("\n");
     int i;
     for(i=0; i<size ; i++)
         printf("%d " , arr[i]);
@@ -46,7 +45,7 @@ void merge(int arr[] , int low , int mid , int high)
     for(k=0; k<size; k++)
         arr[k+low] = temp[k];
     
-    free(temp);
+    free(temp); // not mandatory
 }
 
 void mergeSort(int arr[] , int low , int high)
@@ -59,8 +58,6 @@ void mergeSort(int arr[] , int low , int high)
     merge(arr , low , mid , high);
 }
 
-
-
 int main()
 {
     int size , i;
@@ -69,13 +66,9 @@ int main()
     scanf("%d" , &size);
 
     int arr[size];
-    // srand(time(0));
 
-    //printf("Enter elements of array: ");
     for(i=0; i<size; i++) {
-        // scanf("%d" , &arr[i]);
-        // z = rand();
-        arr[i] = rand();
+        arr[i] = rand() % 1000;
     }
     printf("Unsorted array is\n");
     printArray(arr , size);
@@ -89,7 +82,11 @@ int main()
     double timeTaken = (double)(end - begin) / CLOCKS_PER_SEC;
 
     printf("Time taken %.9lf \n" , timeTaken);
+    
     printf("Sorted array is\n");
     printArray(arr , size); 
     return 0;
 }
+
+// Kunal
+// 27-05 1:49 AM
