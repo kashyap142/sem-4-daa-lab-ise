@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 void printArray(int arr[] , int n)
 {
     int i;
@@ -47,8 +48,16 @@ int main()
     printf("Input array is\n");
     printArray(arr , n);
     
+    clock_t begin = clock();
+
     bubbleSort(arr , n);
     
+    clock_t end = clock();
+
+    double time_taken = (double)(end - begin) / CLOCKS_PER_SEC;
+
+    printf("Time taken in sorting is %.9lf\n", time_taken);
+
     printf("Sorted array is\n");
     printArray(arr , n);
 
