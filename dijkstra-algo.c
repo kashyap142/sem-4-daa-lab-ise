@@ -56,17 +56,17 @@ void dijkstras()
 
 int main()
 {
+    int i,j;
     printf("\nEnter the number of vertices:\t");
     scanf("%d",&n);
+
     printf("Enter the distance matrix");
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            scanf("%d",&cost[i][j]);
+
+    for(i=0; i<n; i++){
+        for(j=0; j<n; j++){
+            scanf("%d", &cost[i][j]);
         }
     }
-
-    printf("\nEnter the source node:\t");
-    scanf("%d",&source);
 
     dijkstras();
 

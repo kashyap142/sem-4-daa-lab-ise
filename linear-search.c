@@ -1,4 +1,6 @@
+// linear search
 #include <stdio.h>
+#include <stdlib.h>
 
 int linearSearch(int arr[] , int size , int key)
 {
@@ -23,8 +25,9 @@ int main()
 
     int arr[n];
     printf("Enter elements of array\n");
-    for(i=0; i<n; i++)
-        scanf("%d", &arr[i]);
+    for(i=0; i<n; i++) {
+        arr[i] = rand() % 1000;
+    }
     
     printf("Enter element to search ");
     scanf("%d",&key);

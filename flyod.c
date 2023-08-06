@@ -1,3 +1,4 @@
+// flyod algorithm 
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -35,7 +36,7 @@ int main()
     printf("Enter no of vertices: ");
     scanf("%d", &n);
 
-    int arr[n][n];
+    int arr[20][20];
     printf("Enter weight matrix of graph\n");
     for(i=0; i<n; i++) {
         for(j=0; j<n; j++) {

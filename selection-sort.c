@@ -1,4 +1,6 @@
+// selection sort
 #include <stdio.h>
+#include <stdlib.h>
 
 void printArray(int arr[] , int n)
 {
@@ -33,7 +35,7 @@ void selectionSort(int arr[] , int n)
             }
         }
         if(min_index != i) {
-            swap( & arr[min_index] , & arr[i]);
+            swap( & arr[min_index] , & arr[i]); // pass by reference
             count++;
         }
     }
@@ -48,8 +50,10 @@ int main()
 
     int arr[n];
     printf("Enter elements of array\n");
-    for( i = 0; i < n; i++)
-        scanf("%d",&arr[i]);
+    for( i = 0; i < n; i++) {
+        // scanf("%d",&arr[i]);
+        arr[i] = rand() % 1000;
+    }
 
     printf("Input array is\n");
     printArray(arr , n);
