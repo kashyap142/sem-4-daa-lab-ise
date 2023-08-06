@@ -1,6 +1,8 @@
+// bubble sort
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 void printArray(int arr[] , int n)
 {
     int i;
@@ -41,9 +43,12 @@ int main()
     scanf("%d",&n);
 
     int arr[n];
-    printf("Enter elements of array\n");
-    for( i = 0; i < n; i++) 
-        scanf("%d",&arr[i]);
+
+    printf("Entering elements of array\n");
+    for( i = 0; i < n; i++) {
+        arr[i] = rand() % 1000; // modulo so every number is less than 1000
+        // scanf("%d",&arr[i]);
+    }
 
     printf("Input array is\n");
     printArray(arr , n);

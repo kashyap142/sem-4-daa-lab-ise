@@ -1,3 +1,4 @@
+// kanpsack algorithm
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -55,14 +56,9 @@ int main()
     int weight[15] = {0};
     int profit[15] = {0};
 
-    printf("Enter weight of items\n");
     for (i = 1; i <= n; i++){
-        scanf("%d", &weight[i]);
-    }
-
-    printf("Enter profit of items\n");
-    for (i = 1; i <= n; i++) {
-        scanf("%d", &profit[i]);
+        printf("Enter weight and profit of item %d: ", i);
+        scanf("%d %d", &weight[i], &profit[i]);
     }
 
     printf("Enter capacity of knapsack: ");

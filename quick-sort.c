@@ -1,12 +1,13 @@
+// quick sort
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 void swap(int *a , int *b)
 {
-    int z = *a;
+    int temp = *a;
     *a = *b;
-    *b = z;
+    *b = temp;
 }
 
 void printArray(int arr[] , int size)
@@ -51,15 +52,19 @@ void quickSort(int arr[] , int low , int high)
 int main()
 {
     int size;
+
     printf("Enter size of array: ");
     scanf("%d",&size);
 
     int arr[size];
     int i = 0;
+
+    // input
     for(i=0; i<size; i++) {
         arr[i] = rand() % 1000;
     }
-    printf("Original array is\n");
+
+    printf("Input Array is\n");
     printArray(arr , size);
 
     clock_t begin = clock();

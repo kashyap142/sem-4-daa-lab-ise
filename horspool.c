@@ -1,3 +1,4 @@
+// horspool algorithm
 #include <stdio.h>
 #include <string.h>
 
@@ -45,17 +46,10 @@ int main()
     char src[size] , pattern[size];
 
     printf("Enter main string\n");
-    fgets(src , size , stdin);
-
-
-    // 'fgets' is preferrd over 'gets' because 'fgets' specify the buffer size of string
+    gets(src); // input
     
     printf("Enter pattern to match\n");
-    fgets(pattern , size , stdin);
-
-    // 'fgets' also take newline '\n' in its buffer, so it can be made 'null' as done below
-    pattern[strlen(pattern)-1] = '\0';
-    src[strlen(src)-1] = '\0';
+    gets(pattern); // input
 
     shiftTable(pattern);
     int ans = horspool(src , pattern);
